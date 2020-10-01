@@ -9,6 +9,10 @@
 </head>
 
 <body>
+	 <div class="mode"> 
+        Dark mode:              
+        <span class="change">OFF</span> 
+    </div> 
   <h1 id="level-title">Press Any Key to Start</h1>
   <div class="container">
     <div class="row">
@@ -36,6 +40,17 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="game.js" charset="utf-8"></script>
+ <script> 
+        $( ".change" ).on("click", function() { 
+            if( $( "body" ).hasClass( "dark" )) { 
+                $( "body" ).removeClass( "dark" ); 
+                $( ".change" ).text( "OFF" ); 
+            } else { 
+                $( "body" ).addClass( "dark" ); 
+                $( ".change" ).text( "ON" ); 
+            } 
+        }); 
+    </script> 
 </body>
 
 </html>
